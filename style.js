@@ -19,15 +19,16 @@ function drawFace(ctx, radius) {
   ctx.fillStyle = 'white';
   ctx.fill();
   grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
-  grad.addColorStop(0, '#333');
-  grad.addColorStop(0.5, 'white');
-  grad.addColorStop(1, '#333');
+  // clock colors
+  grad.addColorStop(0, 'black'); /*hands*/
+  grad.addColorStop(0.5, 'blue');/*inner rim*/
+  grad.addColorStop(1, 'blue'); /*outter rim*/
   ctx.strokeStyle = grad;
   ctx.lineWidth = radius*0.1;
   ctx.stroke();
   ctx.beginPath();
   ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
-  ctx.fillStyle = '#333';
+  ctx.fillStyle = 'black'; /*numbers*/
   ctx.fill();
 }
 
@@ -82,13 +83,13 @@ function drawHand(ctx, pos, length, width) {
 
 $(document).ready(function() {
  
-    // test flag
+    
     const test = false;
   
     // get times from moment
     const now = moment().format('MMMM Do YYYY');
   
-    // commented out for test in non-standard hours
+    
     let nowHour24 = moment().format('H');
     let nowHour12 = moment().format('h');
   
