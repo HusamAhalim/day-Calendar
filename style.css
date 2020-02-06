@@ -9,6 +9,10 @@ body {
     vertical-align: middle;
   }
   
+  #canvas {
+    padding-top: 25px;
+    padding-left: 43%;
+  }
   
  
   input {
@@ -151,11 +155,11 @@ body {
    @keyframes shadow-pulse 
   
   {
-    25% {
+    20% {
       box-shadow: 0 0 0 0px rgb(206, 231, 114);
     }
-    25% {
-      box-shadow: 0 0 0 10px rgb(206, 231, 114);
+    20% {
+      box-shadow: 0 0 0 8px rgb(206, 231, 114);
     }
   }
   .shadowPulse {
